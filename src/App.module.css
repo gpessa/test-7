@@ -1,0 +1,23 @@
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.AppColumn {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.AppColumnTitle {
+  margin:0;
+  padding:0;
+  line-height: 50px;
+  height: 50px;
+}
+
+.AppColumnContent {
+  flex-grow: 1;
+}

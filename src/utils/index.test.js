@@ -1,4 +1,4 @@
-import sortProducts, { isChanged } from './index.js'
+import { arrayChanged, sortProducts } from './index.ts'
 
 describe('Array is aware of changes', () => {
   const test = [{
@@ -7,20 +7,20 @@ describe('Array is aware of changes', () => {
   }]
 
   it('', () => {
-    expect(isChanged(test)).toBe(false)
-    expect(isChanged(test)).toBe(false)
+    expect(arrayChanged(test)).toBe(false)
+    expect(arrayChanged(test)).toBe(false)
 
     test.push({
       id: 1,
       price: 15,
     })
 
-    expect(isChanged(test)).toBe(true)
-    expect(isChanged(test)).toBe(false)
+    expect(arrayChanged(test)).toBe(true)
+    expect(arrayChanged(test)).toBe(false)
 
     test[0] = { id: 3, price: 12 }
 
-    expect(isChanged(test)).toBe(true)
+    expect(arrayChanged(test)).toBe(true)
   })
 })
 

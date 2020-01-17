@@ -1,16 +1,11 @@
-const isChanged = (items) => {
+const arrayChanged = (items: Product[]): boolean => {
   const newPicture = items.map(item => JSON.stringify(item)).toString()
   const isDifferent = (newPicture !== items.picture) && (items.picture !== undefined)
-
-  // eslint-disable-next-line no-param-reassign
   items.picture = newPicture
-
   return isDifferent
 }
 
-const sortProducts = (items, options = { size: 5 }) => {
-  const { size } = options
-
+const sortProducts = (items: Array<Product>, { size }: { size?: number } = { size: 5 }): SortedProduct => {
   const sortedProducts = [...items].sort((p1, p2) => p2.price - p1.price)
 
   const highest = sortedProducts.splice(0, size)
@@ -22,5 +17,4 @@ const sortProducts = (items, options = { size: 5 }) => {
   }
 }
 
-export default sortProducts
-export { isChanged }
+export { arrayChanged, sortProducts }
