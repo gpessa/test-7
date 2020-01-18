@@ -8,8 +8,13 @@ For the third task the idea was to create a picture (stringify version) of the a
 The function to understand if the array was changed was been wrote.
 
 ### Version 2
-It took 30 minutes extra extra. 
+It took 30 minutes extra. 
 I added typescript (I can't live without) and a small interface to test the algorithm 
+
+### Version 2
+It took 30 minutes extra. 
+I added the third TASK and wrote better tests
+
 
 ## Available Scripts
 
