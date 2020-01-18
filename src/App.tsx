@@ -37,7 +37,7 @@ function App() {
       <div className={styles.AppColumn}>
         <h3 className={styles.AppColumnTitle}>Result</h3>
         <div className={styles.AppColumnContent}>
-          <Output value={sortProducts(products, { size })} />
+          <Output value={sortProducts([...products], { size })} />
         </div>
       </div>
     </div>
